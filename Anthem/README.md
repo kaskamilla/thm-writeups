@@ -141,7 +141,7 @@ rdesktop -u Administrator -p 'ChangeMeBaby1MoreTime' 10.67.145.53
 
 | Issue | Fix |
 |---|---|
-| Admin password left in plain text at the top of the public `robots.txt` | Never place credentials, notes, or "jokes" in any publicly reachable file |
+| `SG`'s password left in plain text at the top of the public `robots.txt`, reused for both the Umbraco backoffice and RDP | Never place credentials, notes, or "jokes" in any publicly reachable file |
 | Blog content (hiring post, poem) indirectly reveals the real Umbraco username | Avoid publishing internal naming conventions or identity hints in public-facing content |
 | Umbraco backoffice password reused for the Windows RDP account `SG` | Enforce unique, unrelated passwords per service and account |
 | Backup file `C:\backup\restore.txt` stored the Administrator's plaintext password with an ACL the owner could freely reassign | Store secrets in a vault/secrets manager, never in plaintext files; lock down ACLs so even the file owner can't self-grant access without audit |
