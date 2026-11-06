@@ -73,7 +73,9 @@ With admin access, the `Albums` section exposes an `Add New` button to create al
 A new album, `Pwned`, is created to test the upload functionality.
 
 ![Create new album](images/07-create-album.png)
+
 ![Albums list with Pwned created](images/08-albums-list-pwned.png)
+
 ![Empty Pwned album with Upload button](images/09-pwned-album-empty.png)
 
 The upload feature performs no extension filtering. Uploading `virus.php` — `pentestmonkey`'s `php-reverse-shell.php` configured with the attacker's IP and port — is accepted and stored as-is:
@@ -163,6 +165,7 @@ read
 Entering `reset; bash 1>&0 2>&0` at that prompt spawns a root shell:
 
 ![whoami and id as root](images/13-root-whoami-id.png)
+
 ![root flag](images/14-root-flag.png)
 
 ## Root Cause & Remediation
