@@ -142,7 +142,7 @@ Host script results:
 |_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 
-The scan found 7 open TCP ports. The SSH service on port `22` returned a banner containing `THM{946219583339}`, and the HTTP service on port `80` returned `THM{MySpecialServer007}` in its `Server` header:
+The scan found 7 open TCP ports. The SSH service on port `22` returned a banner containing `THM{946219583339}`, and the HTTP service on port `80` returned `THM{MySpecialServer007}` in its `Server` header. Browsing to the service on port `80` showed a simple page:
 
 ![Port 80 response in the browser](images/02-port80.png)
 
